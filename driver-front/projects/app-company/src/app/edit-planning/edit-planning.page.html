@@ -1,0 +1,79 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="planning-trip" style="color: white;"></ion-back-button>
+  </ion-buttons>
+    <ion-title class="ion-text-center">
+      <h1 class="centered-title"><i> Edit Planning</i></h1>
+      </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <form [formGroup]="planForm" (ngSubmit)="update()"> 
+  <ion-item >
+    <ion-label position="floating" style="color:#382574;">Depart city </ion-label>
+    <ion-input formControlName="departCity"></ion-input>
+    <!--ion-button>
+      <ion-icon shape="round" name="location"></ion-icon>
+    </ion-button-->
+  </ion-item>
+ 
+  <ion-item >
+    <ion-label position="floating" style="color:#382574;" >Depart Date</ion-label>
+    <ion-datetime displayFormat="MMM DD YYYY" min="2020" max="2099" formControlName="departDate"></ion-datetime>
+  </ion-item>
+
+  <ion-item >
+    <ion-label position="floating" style="color:#382574;">Depart Hour</ion-label>
+    <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" formControlName="departHour"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating" style="color:#382574;">Arrival city</ion-label>
+    <ion-input formControlName="arrivalCity"></ion-input>
+    <!--ion-button>
+      <ion-icon shape="round" name="location"></ion-icon>
+    </ion-button-->
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating" style="color:#382574;">Arrival Date</ion-label>
+    <ion-datetime displayFormat="MMM DD YYYY" min="2020" max="2099" formControlName="arrivalDate"></ion-datetime>
+  </ion-item>
+
+  <ion-item >
+    <ion-label position="floating" style="color:#382574;">Arrival Hour</ion-label>
+    <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" formControlName="arrivalHour"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+  <ion-label position="floating" style="color:#382574;">Type</ion-label>
+  <ion-select formControlName="type">
+    <ion-select-option *ngFor="let t of types" [value]="t"> {{Type2LabelMapping[t]}}</ion-select-option>
+  </ion-select>
+</ion-item>
+
+
+<ion-item>
+  <ion-label position="floating" style="color:#382574;">Price</ion-label>
+  <ion-input formControlName="tripPrice" type = "number"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating" style="color:#382574;">NB</ion-label>
+  <ion-input formControlName="reservationNB" type = "number"></ion-input>
+</ion-item>
+
+<!--ion-item>
+  <ion-label position="floating" style="color:#382574;">Company ID</ion-label>
+  <ion-input [(ngModel)]="tripPlan.companyId" [ngModelOptions]="{standalone: true}" formControlName="companyId" type = "text"></ion-input>
+</ion-item-->
+
+<div style="text-align: center; margin: 10%;"> 
+  <ion-button type="submit" [disabled]="planForm.invalid">Update</ion-button>
+</div>
+</form>
+</ion-list>
+</ion-content>

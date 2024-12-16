@@ -1,0 +1,60 @@
+<ion-header  [translucent]="true">
+  <ion-toolbar >
+    <ion-title  style="color:cornsilk">Edit Driver</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/driver-list" style="color: white;"></ion-back-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+<ion-content class="ion-padding">
+
+
+    <ion-item>
+      <ion-label  position="floating">Name</ion-label>
+      <ion-input [(ngModel)]="data.Name" ></ion-input> 
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Last Name</ion-label>
+      <ion-input [(ngModel)]="data.LastName" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Phone Number</ion-label>
+      <ion-input [(ngModel)]="data.PhoneNumber"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input [(ngModel)]="data.Email" ></ion-input>
+    </ion-item>
+   
+
+
+  <!--form [formGroup]="slideOneForm">
+    <ion-item >
+      <ion-label [ngClass]="{ 'has-error':  isSubmitted  && formControls.Name.errors }" position="floating">Name<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input type="text"  formControlName="Name"> </ion-input>
+    </ion-item>
+    <ion-item >
+      <ion-label [ngClass]="{ 'has-error':  isSubmitted  && formControls.LastName.errors }" position="floating">Last Name<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input type="text"  formControlName="LastName"> </ion-input>
+    </ion-item>
+    <ion-item >
+      <ion-label [ngClass]="{ 'has-error':  isSubmitted  && formControls.PhoneNumber.errors }" position="floating">Phone Number<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input type="number"  formControlName="PhoneNumber"> </ion-input>
+    </ion-item>
+    <ion-item >
+      <ion-label [ngClass]="{ 'has-error':  isSubmitted  && formControls.Email.errors }" position="floating">Email<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input type="text"  formControlName="Email"> </ion-input>
+    </ion-item>
+  
+
+  </form-->
+  <br>
+  <ion-button (click)="update()" size="fullscreen"   expand="block" shape="round" >
+    Update</ion-button>
+  
+</ion-content>
+

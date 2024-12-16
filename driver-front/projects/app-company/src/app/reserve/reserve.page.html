@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="color:cornsilk">Reservation</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button style="color: cornsilk;"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+  
+  <ion-card>
+    <img src="./assets/bus.jpg"/> 
+    <form [formGroup]="reservForm" (ngSubmit)="Search()" >
+  
+    <ion-item>
+      <ion-label>Outbound</ion-label>
+      <ion-datetime displayFormat="MMM DD"  formControlName="Outbound"  ></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Return</ion-label>
+      <ion-datetime displayFormat="MMM DD, h A"  formControlName="Return" ></ion-datetime>
+    </ion-item>
+
+    <ion-item >
+      <ion-label  >Departure</ion-label>
+      <ion-select   formControlName="Departure">
+        <ion-select-option *ngFor= "let city of cities"[value]= "city.name" >
+          {{ city.name }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item> 
+      <ion-item >
+        <ion-label  >Arrival</ion-label>
+        <ion-select    formControlName="Arrival">
+          <ion-select-option *ngFor= "let city of cities"[value]= "city.name" >
+            {{ city.name }}
+          </ion-select-option>
+        </ion-select>
+    </ion-item>
+    <ion-item > 
+      <ion-label>Traveller </ion-label>
+      <ion-input type="number" value="" min="0" max="30" [{ngModel}] ="currentNumber" (ionChange)="NumChanged($event)">
+        {{currentNumber}} </ion-input>
+    </ion-item>
+      
+     
+
+    <ion-button type="submit" size="fullscreen"   expand="block" shape="round">Search</ion-button>
+    </form>
+  </ion-card>
+  
+
+</ion-content>

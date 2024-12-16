@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="color:cornsilk">Trips</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/reserve" style="color: white;"></ion-back-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card *ngFor="let item of tripData">
+  <ion-item > 
+    <span item-start style="color: gray;">12:00</span>
+
+    <ion-icon name="location-sharp" item-start large></ion-icon>
+    <h2 >{{ item.Departure }}</h2>
+    
+    
+  </ion-item>
+  <ion-item>
+    <span item-start style="color: gray;">14:00</span>
+    <ion-icon name="location-sharp" item-start large></ion-icon>
+    
+    <h2>{{ item.Arrival }}</h2>
+    
+  </ion-item>
+    <p>Duration 2hr</p>
+    <span style="color: #382574">25.6 €</span>
+ <ion-item>
+  <ion-button (click)="book()" size="fullscreen"   expand="block" shape="round" routerLink="/checkout">
+    Book this trip</ion-button>
+ </ion-item>
+
+</ion-card>
+</ion-content>

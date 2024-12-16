@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+    <ion-toolbar  >
+        <ion-title style="color:cornsilk">Add driver</ion-title>
+        <ion-buttons slot="start">
+          <ion-back-button defaultHref="/driver-list" style="color: white;"></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-list>
+    <form [formGroup]="slideOneForm" (ngSubmit)="save()">
+      <ion-item >
+        <ion-label  position="floating">Name<ion-text color="danger">*</ion-text></ion-label>
+        <ion-input type="text"  formControlName="Name" [(ngModel)]="data.Name"> </ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label  position="floating">Last Name<ion-text color="danger">*</ion-text></ion-label>
+        <ion-input type="text"  formControlName="LastName"  [(ngModel)]="data.LastName"> </ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label  position="floating">Phone Number<ion-text color="danger">*</ion-text></ion-label>
+        <ion-input type="number"  formControlName="PhoneNumber"  [(ngModel)]="data.PhoneNumber">  </ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label  position="floating">Email<ion-text color="danger">*</ion-text></ion-label>
+        <ion-input type="text"  formControlName="Email"  [(ngModel)]="data.Email"> </ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label  >Company<ion-text color="danger">*</ion-text></ion-label>
+        <ion-select  formControlName="companyId"  [class.invalid]="selectedVal"  [(ngModel)]="data.companyId"  interface = "action-sheet">
+          <ion-select-option *ngFor= "let company of companies"[value]= "company.id" >
+            {{ company.name }}
+          </ion-select-option> 
+        </ion-select>
+      </ion-item>
+  <br>
+    <ion-button    size="fullscreen"   expand="block" shape="round"  type="submit" [disabled]="slideOneForm.invalid"  >Save</ion-button>
+  </form>
+  </ion-list>
+
+</ion-content>

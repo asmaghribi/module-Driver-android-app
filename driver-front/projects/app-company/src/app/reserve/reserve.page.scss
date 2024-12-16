@@ -1,0 +1,44 @@
+ion-header ion-toolbar {
+    --background: #382574;
+}
+ion-toolbar div {
+    border: 1px solid #382574;
+}
+ion-fab-button {
+
+    --background: #382574;
+}
+.card-background-page {
+
+    ion-card {
+      position: relative;
+      text-align: center;
+    }
+  
+    .card-title {
+      position: absolute;
+      top: 36%;
+      font-size: 2.0em;
+      width: 100%;
+      font-weight: bold;
+      color: #fff;
+    }
+  
+    .card-subtitle {
+      font-size: 1.0em;
+      position: absolute;
+      top: 52%;
+      width: 100%;
+      color: #fff;
+    }
+  
+  }
+  ion-button {
+    margin-bottom:25px;
+    margin-left:70px;
+    margin-right:70px;
+   --background: #382574;
+   }
+   .update-button-color{
+     --background: #190a49;
+   }

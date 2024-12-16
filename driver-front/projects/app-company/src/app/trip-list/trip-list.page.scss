@@ -1,0 +1,29 @@
+ion-header ion-toolbar {
+    --background: #382574;
+}
+ion-toolbar div {
+    border: 1px solid #382574;
+}
+ion-fab-button {
+
+    --background: #382574;
+    
+ 
+}
+ion-icon{
+    color: red;
+}
+ion-button {
+    margin-bottom:25px;
+    margin-left:70px;
+    margin-right:70px;
+   --background: #382574;
+   }
+   .update-button-color{
+     --background: #190a49;
+   }
+span{
+    font-size: 25px;
+    margin-left:5px;
+    margin-right:0px;
+   }

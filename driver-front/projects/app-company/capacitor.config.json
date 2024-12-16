@@ -1,0 +1,13 @@
+{
+  "appId": "com.confledis.driver.company.app",
+  "appName": "driver app",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}

@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="color:cornsilk">Checkout</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/trip-list" style="color: white;"></ion-back-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="checkoutForm" (ngSubmit)="Payment()">
+<ion-card>
+ 
+  <ion-icon name="people" style="color: #382574 ;" ></ion-icon>
+  <ion-label stacked class="myLabel" style="color: black;">Passenger</ion-label>
+  <ion-input placeholder="Enter your Name" formControlName="name"></ion-input>
+  <ion-input placeholder="Enter your LastName" formControlName="lastname"></ion-input>
+
+  <ion-icon name="at-circle" style="color: #382574 ;"></ion-icon>
+  <ion-label stacked class="myLabel" style="color: black;">Contact</ion-label>
+  <ion-input placeholder="Enter your Email"  formControlName="email"></ion-input>
+  <ion-input placeholder="Enter your Phone" type="number" formControlName="phone"></ion-input>
+</ion-card>
+
+<ion-button type="submit" size="fullscreen"   expand="block" shape="round">Payment</ion-button>
+</form>
+</ion-content>

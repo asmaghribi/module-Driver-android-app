@@ -1,0 +1,46 @@
+
+ion-header ion-toolbar {
+    --background: #382574;
+}
+ion-toolbar div {
+    border: 1px solid #382574;
+}
+
+ion-content{
+    --background: url(../../assets/route.jpg);
+    --background-repeat: no-repeat;
+    --background-position: center ;
+    --background-size: contain;
+ 
+}
+
+h1 {
+color: #382574;
+font-weight:bold;
+}
+p{
+    font-weight:bold;
+}
+
+ion-card img {
+    width:25px;
+    height: 16px;
+    margin-left: 10px;
+}
+
+h4 {
+    color:#000000;
+    margin-left: 5px;
+  
+   
+}
+
+ion-card {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.connect-Email
+{
+    margin-left: 46px;
+}
